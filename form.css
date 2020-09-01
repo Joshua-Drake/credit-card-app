@@ -1,0 +1,377 @@
+/* Navigation bar - begin */
+.navbar {
+    width: 100vw;
+    position: absolute;
+    height: 8vh;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 55px;
+}
+
+.navbar-toggler-icon {
+    height: 5vh;
+    margin-bottom: 10px;
+    min-height: 30px;
+}
+
+.navbar-toggler {
+    height: 6vh;
+    padding-bottom: 1vh;
+    margin-left: 4vw;
+    min-height: 40px;
+}
+
+.nav-link {
+    margin-bottom: 0px;
+}
+
+#navbar-list-2 {
+    background-color: #3c3c3b;
+    width: 100vh;
+}
+
+#form-page-nav {
+    color: gray;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#twitter-page-nav {
+    color: white;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+#twitter-page-nav:hover {
+    color: #5282a1;
+}
+
+.bg-dark {
+    background-color: #3c3c3b !important;
+}
+/* Navigation bar - end */
+
+/* Background and container - begin */
+.container-fluid {
+    width: 66vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    /* color: whitesmoke; */
+    clear: both;
+    overflow: hidden;
+    border-left: solid 3px #3c3c3b;
+    border-right: solid 3px #3c3c3b;
+    min-width: 340px;
+}
+
+body {
+    background-image: url("/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#digital-native-logo {
+    margin-top: 14vh;
+    float: left;
+}
+/* Background and container - end */
+
+/* Back of card - begin */
+#request-to-submit {
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: 500;
+}
+
+#send-button {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #3c3c3b;
+    background-color: #2597f4;
+    color: #3c3c3b;
+    border-width: 2px;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    width: 25%;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #0b7dda;
+    transition: all 0.3s ease;
+}
+
+#send-button:active {
+    background-color: #0b7dda;
+    transform: translateY(1px);
+}
+
+#cancel-button {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #3c3c3b;
+    background-color: #f5493d;
+    color: #3c3c3b;
+    border-width: 2px;
+    margin-top: 5px;
+    margin-left: 20%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+    width: 25%;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#cancel-button:hover {
+    background-color: #f21c0d;
+    transition: all 0.3s ease;
+}
+
+#cancel-button:active {
+    background-color: #f21c0d;
+    transform: translateY(1px);
+}
+/* Back of card - end */
+
+/* Form - begin */
+label, input {
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+	margin: auto;
+}
+
+label {
+    clear: both;
+    float:left;
+    font-weight: 900;
+}
+
+input {
+    margin-left: 10%;
+    float: right;
+    height: 25px;
+    display: block;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;	
+    margin: auto;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #3c3c3b;
+}
+
+.form-control {
+    margin-right: 8%;
+    border-width: 2px;
+    border-color: #3c3c3b;
+    margin-top: 2px;
+}
+
+.field {
+    margin-left: 2%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+form {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;;
+    margin-left: 10%;
+}
+/* Form - end */
+
+/* Flip animation - begin */
+.flip-card {
+    background-color: transparent;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    z-index : 1;
+    margin-top: 35vh;
+}
+
+.flip-card-inner {
+    transition: all 1.0s linear;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all 1.0s linear;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: all 1.0s linear;
+    -ms-transform-style: preserve-3d;
+    -ms-transition: all 1.0s linear;
+}
+
+.flip-card.active .flip-card-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+}
+
+.flip-card-front {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+.flip-card-back {
+    display: block;
+    box-sizing: border-box;
+    min-width: 300px;
+    min-height: 186px;
+    width: 45vh;
+    visibility: hidden;
+    -webkit-visibility: hidden;
+    -moz-visibility: hidden;
+    -ms-visibility: hidden;
+}
+/* Flip animation - end */
+
+/* Card front - begin */
+#card {
+    width: 100%;
+    height: auto;
+    min-width: 300px;
+    min-height: 186px;
+    max-width: 371px;
+    max-height: 216px;
+    padding-top: 4%;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    border-color: #3c3c3b;
+    background-color: #165179;
+    margin: auto;
+    -webkit-box-shadow: 10px 10px 24px -4px rgba(157,158,156,1);
+    -moz-box-shadow: 10px 10px 24px -4px rgba(157,158,156,1);
+    -ms-box-shadow: 10px 10px 24px -4px rgba(157,158,156,1);
+    box-shadow: 10px 10px 24px -4px rgba(157,158,156,1);
+}
+
+#submit-button {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: white;
+    background-color: #3c3c3b;
+    color: white;
+    border-width: 2px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    width: 40%;
+    font-weight: 400;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #343432;
+    transition: all 0.3s ease;
+}
+
+#submit-button:active {
+    background-color: #343432;
+    transform: translateY(1px);
+}
+
+#submit-button:disabled {
+    border-color: rgb(199, 193, 193);
+    background-color: #696969;
+    color: rgb(199, 193, 193);
+    cursor: default;
+}
+
+#card input {
+    width: 60%;
+}
+/* Card front - end */
+
+/*Logo moving on resize - start*/
+#digital-native-logo-moved{
+    visibility: hidden;
+    margin-top: 40px
+}
+
+@media only screen and (max-width: 1112px) {
+    #digital-native-logo {
+        visibility: hidden;
+    }
+    #digital-native-logo-moved {
+        visibility: visible;
+    }
+    #modal-content {
+    width: 60vw !important; /* Could be more or less, depending on screen size */
+    min-width: 237px;
+    margin-top: 50% !important;
+    margin-bottom: 50% !important;
+  }
+}
+/*Logo moving on resize - end*/
+
+/* Modal Content/Box */
+#modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40vw; /* Could be more or less, depending on screen size */
+    color: #3c3c3b;
+    display: grid;
+    text-align: center;
+  }
+
+.modal-backdrop {
+  background-color: rgba(100, 100, 100, 0.8);
+  width: 100vw;
+  height: 100vh;
+}
+
+#close-button {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #3c3c3b;
+    background-color: rgb(218, 63, 63);
+    color: #3c3c3b;
+    border-width: 2px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 15vw;
+    min-width: 54px;
+    font-weight: 500;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#close-button:hover {
+    background-color: #f21c0d;
+}
+
+#submission-thanks {
+    text-align: center;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <title>Credit Card App</title>
+</head>
+<body>
+<!-- UNCOMMENT THE CODE BELOW IF YOU WOULD LIKE THE NAVIGATION BAR TO BE ENABLED -->
+<!-- Navigation bar - begin -->
+<!-- <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar-list-2">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <p id="form-page-nav" class="nav-link disabled" href="#">Payment</p>
+      </li>
+      <li class="nav-item">
+        <a id="twitter-page-nav" class="nav-link" href="./contact/contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<!-- Navigation bar - end -->
+<!-- Background and container - begin -->
+<div class="container-fluid">
+  <div id="digital-native-logo"><img src="/transaction-online-transparent-vertical.png" alt="Digital Native UK's logo">
+  </div>
+<!-- Background and container - end -->
+<!-- Modal - begin -->
+<div id="myModal" class="modal modal-backdrop">
+<!-- Modal content - begin -->
+  <div id="modal-content">
+    <h1 id="submission-thanks">Thank you!</h1>
+    <p id="details-sent"></p>
+    <button type="button" class="reset-page" id="close-button">Close</button>
+  </div>
+</div>
+<!-- Modal - end -->
+<!-- Card flip function - begin -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+<!-- Card flip function - end -->
+<!-- Card front and form - begin -->
+        <form id="card" class="container">
+          <div class="form-group">
+            <label class="field">Name:</label>
+            <input id="name-input" class="form-control" type="text" name="first" placeholder="e.g. Josh Drake" onblur="checkName(this.value)">
+          </div>
+          <div class="form-group">
+            <label class="field">Email:</label>
+            <input id="email-input" class="form-control" type="email" name="email" placeholder="example@email.com" onblur="checkEmail(this.value)">
+          </div>
+          <div class="form-group">
+            <label class="field">Card:</label>
+            <input id="card-number-input" class="form-control" type="text" name="card" placeholder="credit card no." onblur="checkCard(this.value)" onkeyup="checkCard(this.value)">
+            <button id="submit-button" type="button" onclick="emailRecipient()">Submit</button>
+          </div>
+        </form>
+      </div>
+<!-- Card front and form - end -->
+<!-- Card back - begin -->
+      <div class="flip-card-back" id="card">
+        <p id="request-to-submit"></p>
+        <button type="button" class="reset-page" id="cancel-button">Cancel</button>
+        <button type="button" id="send-button" onclick="sendEmail()">Send</button>
+      </div>
+<!-- Card back - end -->
+    </div>
+  </div>
+<!-- Image to appear on resize - start -->
+      <div id="digital-native-logo-moved"><img src="/transaction-online-transparent.png" alt="Transaction Online logo">
+      </div>
+<!-- Image to appear on resize - end -->
+</div>
+  <script src="form.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
